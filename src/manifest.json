@@ -1,0 +1,56 @@
+{
+  "manifest_version": 2,
+  "name": "Markdown Meeting Viewer",
+  "version": "1.0.0",
+  "author": "Han Nay Aung",
+  "description": "Read Markdown files as clean pages and present them as slides — with math, callouts, a talk timer with bells, and next-presenter notices for research group meetings.",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{899228fe-c13c-4870-9cdb-cb2aefa63c4c}",
+      "strict_min_version": "128.0",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  },
+  "permissions": ["storage", "unlimitedStorage", "clipboardWrite"],
+  "browser_action": {
+    "default_title": "Open a Markdown file",
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "file:///*.md",
+        "file:///*.markdown",
+        "*://*/*.md",
+        "*://*/*.markdown"
+      ],
+      "js": [
+        "lib/marked.min.js",
+        "lib/marked-footnote.js",
+        "lib/purify.min.js",
+        "lib/highlight.min.js",
+        "lib/katex.min.js",
+        "settings.js",
+        "research.js",
+        "timer.js",
+        "present.js",
+        "render.js",
+        "content.js"
+      ],
+      "css": ["lib/katex.min.css", "viewer.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": ["lib/fonts/*", "sounds/*"]
+}

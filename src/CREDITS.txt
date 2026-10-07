@@ -1,0 +1,25 @@
+Markdown Meeting Viewer — credits
+
+Created by Han Nay Aung.
+Most of the code was written with an AI assistant (Claude by Anthropic),
+following Han Nay Aung's ideas, design and testing.
+
+Built-in announcement voices (sounds/)
+  Made with Open JTalk (Nagoya Institute of Technology, Modified BSD license).
+  next-presenter-f.mp4: HTS voice "tohoku-f01" (neutral)
+    Copyright (c) 2015 Intelligent Communication Network (Ito-Nose) Laboratory,
+    Tohoku University. Licensed under Creative Commons Attribution 4.0
+    (https://creativecommons.org/licenses/by/4.0/).
+    https://github.com/icn-lab/htsvoice-tohoku-f01
+  next-presenter-m.mp4: HTS voice "nitech-jp-atr503-m001"
+    Nagoya Institute of Technology, Creative Commons Attribution 3.0.
+
+Libraries (lib/)
+  marked — MIT License
+  marked-footnote — MIT License
+  DOMPurify — Apache License 2.0 / MPL 2.0
+  highlight.js — BSD 3-Clause License
+  KaTeX — MIT License
+
+The "KG" theme uses the colors published in Kwansei Gakuin's visual identity
+guidelines. This project is not affiliated with or endorsed by the university.
